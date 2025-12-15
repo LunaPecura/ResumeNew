@@ -43,11 +43,11 @@ body {
 }
 
 #section-main {
-    width: 70%;
+    width: 65%;
 }
 
 #section-side {
-    width: 30%;
+    width: 35%;
 }
 
 .subsection { /* DEFAULT FLEX BEHAVIOR FOR SUBSECTIONS SET HERE */
@@ -122,28 +122,39 @@ body {
 
 .employment-card, .education-card {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
     border: solid 1px var(--txtcolor-muted);
     border-width: 0px 0px 1px 0px;
     padding: 10px;
 }
 
-.employment-card-left, .education-card-left { /* Name of employer/institution */
+.employment-card-row1, .employment-card-row2,
+.education-card-row1, .education-card-row2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.employment-card-topleft, .education-card-topleft { /* Name of employer/institution */
     font-size: 20px;
     font-weight: bold;
     color: var(--txtcolor-contrast);
 }
 
-.employment-card-right, .education-card-right { /* Dates */
+.employment-card-topright, .education-card-topright { /* Dates */
     font-size: 20px;
     color: var(--txtcolor-muted);
 }
 
-.employment-card-bottom, .education-card-bottom { /* Job title / course name */
+.employment-card-bottomleft, .education-card-bottomleft { /* Job title / course name */
     font-size: 18px;
-    width: 100%;
     font-weight: bold;
+    padding-top: 2px;
+}
+
+.employment-card-bottomright, .education-card-bottomright { /* Job title / course name */
+    font-size: 18px;
+    color: var(--txtcolor-muted);
     padding-top: 2px;
 }
 
