@@ -27,17 +27,19 @@ body {
     border: solid 0px lightgray;
 }
 
-.section { /* DEFAULT FLEX BEHAVIOR FOR SECTIONS SET HERE */
+/* --------------------------------------------------------------------------- */
+
+.section { 
     box-sizing: border-box;
-    display: flex;
+    display: flex; /* DEFAULT FLEX BEHAVIOR SET HERE */
     flex-direction: column;
     justify-content: space-between;
     border: solid 0px; /* EXTERNAL WIREFRAME BORDERS */
-    padding: 10px;
+    padding: 5px;
 }
 
 #section-top { 
-    flex-direction: row; /* Override default flex behavior set for sections */
+    flex-direction: row; /* OVERRIDE */
     flex-wrap: wrap;
     width: 100%; 
 }
@@ -45,14 +47,44 @@ body {
 #section-main { width: 65%; }
 #section-side { width: 35%; }
 
-.subsection { /* DEFAULT FLEX BEHAVIOR FOR SUBSECTIONS SET HERE */
+/* --------------------------------------------------------------------------- */
+
+.subsection { 
     box-sizing: border-box;
-    display: flex;
+    display: flex; /* DEFAULT FLEX BEHAVIOR SET HERE */
     flex-direction: column;
     justify-content: space-evenly;
     border: solid 0px rebeccapurple; /*INTERNAL WIREFRAME BORDERS*/
-    padding: 10px;
+    padding: 10px; /* DEFAULT PADDING */
 }
+
+#subsection-image { 
+    padding: 0px; /* OVERRIDE */
+}
+
+#subsection-header {
+    justify-content: flex-start; /* OVERRIDE */
+    padding: 0px; /* OVERRIDE */
+}
+
+#subsection-bio {
+    width: 100%;
+    border-color: var(--txtcolor-main);
+    border-width: 0px 0px 1px 0px; /* main dividing line */
+    padding-bottom: 50px;
+}
+
+#subsection-info {
+    margin-left: auto; /* push content to the right */
+}
+
+#subsection-employment {}
+#subsection-education {}
+#subsection-skills {}
+#subsection-languages {}
+#subsection-likes {}
+
+/* --------------------------------------------------------------------------- */
 
 .subheader {
     font-size: 25px;
@@ -63,25 +95,7 @@ body {
     margin-bottom: 10px;
 }
 
-#subsection-overview { 
-    width: 60%;
-    flex-direction: row; /* Override subsection default flex behavior */
-    justify-content: flex-start;
-}
-
-#subsection-bio {
-    width: 100%;
-    border-color: var(--txtcolor-main);
-    border-width: 0px 0px 1px 0px; /* dividing line between top and main section */
-    padding-bottom: 50px;
-}
-
-#subsection-info { width: 40%; }
-#subsection-employment {}
-#subsection-education {}
-#subsection-skills {}
-#subsection-languages {}
-#subsection-hobbies {}
+/* --------------------------------------------------------------------------- */
 
 .content-item {
     border: solid 1px var(--txtcolor-muted);
@@ -108,8 +122,7 @@ body {
     border-width: 0px; /* Override display of content item's bottom border */
 }
 
-
-/* MAIN SECTION */
+/* --------------------------------------------------------------------------- */
 
 .card {
     display: flex;
@@ -153,8 +166,7 @@ body {
     padding: 10px 0px;
 }
 
-
-/* LANGUAGE SECTION */
+/* --------------------------------------------------------------------------- */
 
 .language-item {
     display: flex;
@@ -166,17 +178,13 @@ body {
     margin-left: auto;
 }
 
-
-/* SKILLS SECTION */
-
 .skill-item {
     display: flex;
     align-items: center;
     padding: 10px;
 }
 
-
-/* GEOMETRY */
+/* --------------------------------------------------------------------------- */
 
 .circle-empty {
     width: 20px;
