@@ -1,0 +1,208 @@
+:root {
+    --bgcolor-main: #222222;
+    --bgcolor-contrast: black;
+    --txtcolor-main: darkgray;
+    --txtcolor-contrast: snow;
+    --txtcolor-muted: #666666; 
+}
+
+body {
+    background-color: var(--bgcolor-contrast);
+    color: var(--txtcolor-main);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#main-container { /* MAIN FLEX BOX */
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: var(--bgcolor-main);
+    width: 80%;
+    margin: auto;
+    padding: 25px 50px;
+}
+
+.box {
+    border: solid 0px lightgray;
+}
+
+.section { /* DEFAULT FLEX BEHAVIOR FOR SECTIONS SET HERE */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: solid 0px; /* EXTERNAL WIREFRAME BORDERS */
+    padding: 10px;
+}
+
+#section-top { 
+    flex-direction: row; /* Override default flex behavior set for sections */
+    flex-wrap: wrap;
+    width: 100%; 
+}
+
+#section-main {
+    width: 70%;
+}
+
+#section-side {
+    width: 30%;
+}
+
+.subsection { /* DEFAULT FLEX BEHAVIOR FOR SUBSECTIONS SET HERE */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: solid 0px rebeccapurple; /*INTERNAL WIREFRAME BORDERS*/
+    padding: 10px;
+}
+
+.subsection-header {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--txtcolor-contrast);
+    background-image: linear-gradient(to right, var(--bgcolor-main), var(--txtcolor-muted));
+    padding: 10px 10px 10px 0px;
+    margin-bottom: 10px;
+}
+
+#subsection-overview { 
+    width: 60%;
+    flex-direction: row; /* Override subsection default flex behavior */
+    justify-content: flex-start;
+}
+
+#subsection-info {
+    width: 40%;
+}
+
+#subsection-bio {
+    width: 100%;
+    border-color: var(--txtcolor-main);
+    border-width: 0px 0px 1px 0px; /* dividing line between top and main section */
+    padding-bottom: 50px;
+}
+
+#subsection-employment {}
+#subsection-education {}
+#subsection-skills {}
+#subsection-languages {}
+#subsection-hobbies {}
+
+.content-item {
+    border: solid 1px var(--txtcolor-muted);
+    border-width: 0px 0px 1px 0px;
+    padding: 10px;
+}
+
+#content-item-image {
+    border-width: 0px; /* Override display of content item's bottom border */
+}
+
+#content-item-name {
+    font-size: 35px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 0.05em;
+    color: var(--txtcolor-contrast);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-width: 0px; /* Override display of content item's bottom border */
+}
+
+#content-item-title {
+    font-size: 25px;
+    font-style: italic;
+    border-width: 0px; /* Override display of content item's bottom border */
+}
+
+
+/* MAIN SECTION */
+
+.employment-card, .education-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: solid 1px var(--txtcolor-muted);
+    border-width: 0px 0px 1px 0px;
+    padding: 10px;
+}
+
+.employment-card-left, .education-card-left { /* Name of employer/institution */
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--txtcolor-contrast);
+}
+
+.employment-card-right, .education-card-right { /* Dates */
+    font-size: 20px;
+    color: var(--txtcolor-muted);
+}
+
+.employment-card-bottom, .education-card-bottom { /* Job title / course name */
+    font-size: 18px;
+    width: 100%;
+    font-weight: bold;
+    padding-top: 2px;
+}
+
+.employment-card-main, .education-card-main { /* Job description / course description */
+    width: 100%;
+    padding: 10px 0px;
+}
+
+
+/* LANGUAGE SECTION */
+
+.language-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.language-item > :first-child { /* push circles to the right */
+    margin-left: auto;
+}
+
+.circle-empty {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: 3px;
+}
+
+.circle-filled {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    background-color: black;
+    border-radius: 50%;
+    margin: 3px;
+}
+
+.bullet-square {
+    width: 10px;
+    height: 10px;
+    min-width: 10px;
+    border: 1px solid black;
+    background-color: black;
+    margin-right: 15px;
+}
+
+.purple-filling { background-color: rebeccapurple; border-color: rebeccapurple; }
+.blue-filling { background-color: steelblue; border-color: steelblue; }
+.teal-filling { background-color: teal; border-color: teal; }
+.yellow-filling { background-color: goldenrod; border-color: goldenrod; }
+.orange-filling { background-color: peru; border-color: peru; }
+.teal-border { border-color: teal; }
+
+
+/*SKILLS SECTION*/
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
