@@ -41,6 +41,7 @@ body {
 #section-top { 
     flex-direction: row; /* OVERRIDE */
     flex-wrap: wrap;
+    justify-content: space-between;
     width: 100%; 
 }
 
@@ -63,7 +64,7 @@ body {
 }
 
 #subsection-header {
-    justify-content: flex-start; /* OVERRIDE */
+    justify-content: flex-start;
     padding: 0px; /* OVERRIDE */
 }
 
@@ -116,7 +117,16 @@ body {
     border-width: 0px; /* Override display of content item's bottom border */
 }
 
-#content-item-title {
+#img-icon {
+    width: 25px;
+    height: 25px;
+}
+
+#content-item-icon {
+    border-width: 0px; /* Override display of content item's bottom border */
+}
+
+#content-item-location {
     font-size: 25px;
     font-style: italic;
     border-width: 0px; /* Override display of content item's bottom border */
